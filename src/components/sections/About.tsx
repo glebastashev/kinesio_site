@@ -12,7 +12,7 @@ export const About = () => {
         <FadeIn className="order-2 lg:order-1 relative">
            <div className="aspect-[4/5] max-w-md mx-auto relative rounded-3xl overflow-hidden glass-dark border-white/10 p-2">
               <img 
-              src="/assets/photo_2026-03-21 14.16.56.jpeg" 
+              src={`${import.meta.env.BASE_URL}assets/dariya_photo.jpeg`} 
               alt="Надежда Ефремова" 
               className="w-full h-full object-cover rounded-xl shadow-2xl"
             />
