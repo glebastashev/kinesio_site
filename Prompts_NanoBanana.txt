@@ -1,0 +1,48 @@
+# Промпты для 3D-анимации слоев (Nano Banana / Midjourney)
+
+Я посмотрел сгенерированные файлы. Сами по себе они красивые, но сейчас у них **абсолютно разные позы и ракурсы**. 
+- На первом фото девушка стоит в профиль/вполоборота с изгибом.
+- На втором фото скелет стоит идеально прямо (во фронт).
+- На третьем нервная система тоже прямо, но телосложение отличается от первого.
+
+Если мы наложим их друг на друга на сайте, при скролле вместо "растворения" тела будет резкий скачок: девушка вдруг превратится в прямостоящий скелет. 
+
+Чтобы магия сработала, **поза, размер и ракурс должны совпадать пиксель в пиксель**. 
+
+Поскольку нейросеть (Nano Banana) не может за один раз выдать 3 разные текстуры на одной позе, вам нужно использовать **первое сгенерированное фото как Референс по позе** (в Midjourney это параметр `--cref` или Image-to-Image, в Stable Diffusion — ControlNet, в Шедевриуме/других сетях — "создать похожее" по картинке).
+
+Ниже 3 отдельных промпта, которые нужно использовать. 
+
+---
+
+## 1. Промпт для первого слоя: Внешняя оболочка (Body)
+*Это базовая картинка. Сначала добейтесь идеального результата по этому промпту, сохраните картинку. Она будет фундаментом.*
+
+**Промпт (на английском, т.к. нейросети лучше понимают его):**
+> Full body silhouette of an elegant gender-neutral human figure wearing a minimalist seamless matte athletic base layer suit (non-eroticized, very professional and clean). Front view, symmetrical pose, arms relaxed at the sides, feet together. The material is premium matte ivory porcelain, soft diffuse studio lighting, subsurface scattering, expensive aesthetic, minimalist, isolated on solid black background, highly detailed 3D render, octane render. --ar 9:16
+
+*Почему черный фон?* Нейросети часто путаются с сетками прозрачности. Лучше генерировать на идеальном черном фоне, разработчику будет проще вырезать его через код (Blend Mode: Screen/Lighten или программное удаление фона).
+
+---
+
+## 2. Промпт для второго слоя: Скелет (Skeleton)
+*ОБЯЗАТЕЛЬНО: Загрузите первую картинку (Body) в нейросеть как референс (Image Prompt / ControlNet / Depth-map), чтобы сеть вписала скелет РОВНО в тот же силуэт!*
+
+**Промпт:**
+> Full body human skeleton, standing straight. Front view, exactly the same symmetrical pose, arms relaxed at the sides, feet together. Premium medical 3D rendering, elegant and clean bone structure. The material is matte white plastic and soft frosted glass, expensive aesthetic, glowing softly from within. Minimalist, isolated on solid black background, octane render. --ar 9:16 
+
+---
+
+## 3. Промпт для третьего слоя: Нервная система (Nervous System)
+*ОБЯЗАТЕЛЬНО: Снова используйте первую картинку (Body) или вторую (Скелет) как референс для четкого совпадения позы.*
+
+**Промпт:**
+> Full body human nervous system network, standing straight. Front view, symmetrical pose, arms relaxed at the sides. Intricate glowing network of energy pathways, nerves, spinal cord, branching out. Vivid neon glowing yellow color (hex #E8E230), bioluminescent, glowing energy lines on a dark void. Premium aesthetic, highly detailed scientific visualization, 3D render, isolated on solid black background. --ar 9:16
+
+---
+
+### Альтернативный (более простой) вариант: 
+Если нейросеть все равно упорно выдает разные позы, есть лайфхак. 
+Вам нужно сгенерировать **только одну третью картинку (Нервную систему)**, но с прозрачным или черным фоном (прямо как вы уже сделали на третьем фото: `1774087950291-cn4r2z4xgsq.png`).
+
+Тогда мы уберем скелет вообще. На сайте будет красивый силуэт тела, внутри которого, по мере скролла, будут загораться желтые вены и нервные окончания. Это гораздо проще в реализации и выглядит тоже очень "дорого".

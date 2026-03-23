@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-alabaster text-graphite font-sans antialiased selection:bg-accent-yellow selection:text-graphite;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/40 backdrop-blur-md border border-white/60 shadow-sm rounded-3xl;
+  }
+  
+  .glass-dark {
+    @apply bg-graphite/40 backdrop-blur-md border border-graphite/20 shadow-sm rounded-3xl text-white;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(232, 226, 48, 0.4);
+  }
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F2F0EB;
+}
+::-webkit-scrollbar-thumb {
+  background: #E8E230;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d6cf1d;
+}
