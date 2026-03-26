@@ -6,22 +6,22 @@ const audiences = [
   {
     title: "Телесная трансформация",
     desc: "Вы устали топить себя в море слов и интеллектуальных объяснений своей боли, и хотите реальных изменений в теле.",
-    img: "/assets/audience_mind_body.png"
+    img: import.meta.env.BASE_URL + "assets/audience_mind_body.png"
   },
   {
     title: "Биомеханика и спорт",
     desc: "Вы спортсмен или любитель фитнеса, которому нужно устранить мышечно-связочный дисбаланс и выстроить правильную базу для безопасных тренировок.",
-    img: "/assets/audience_biomechanics.png"
+    img: import.meta.env.BASE_URL + "assets/audience_biomechanics.png"
   },
   {
     title: "Забота о детях",
     desc: "Вы родитель, чей ребенок страдает от энуреза, тревожности или нарушения осанки, а классические подходы не дают долгосрочного результата.",
-    img: "/assets/audience_care.png"
+    img: import.meta.env.BASE_URL + "assets/audience_care.png"
   },
   {
-    title: "Движение к изобилию",
-    desc: "Вы хотите не просто «убежать от боли», а двигаться к своим целям, здоровью и изобилию.",
-    img: "/assets/audience_abundance.png"
+    title: "Целеполагание и личностный рост",
+    desc: "Вы хотите не просто «убежать от боли», а двигаться к своим целям и благополучию, начать действовать без бесконечного копания в эмоциональных травмах и событиях прошлого.",
+    img: import.meta.env.BASE_URL + "assets/audience_abundance.png"
   }
 ];
 
