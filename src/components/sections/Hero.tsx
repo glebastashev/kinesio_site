@@ -21,17 +21,17 @@ const AnatomyLoop = () => {
       <div className="absolute inset-0 rounded-[60px] shadow-[inset_0_0_80px_rgba(0,0,0,0.8)] pointer-events-none" />
       
       <img 
-        src="/assets/layer1_body.png" 
+        src={`${import.meta.env.BASE_URL}assets/layer1_body.png`} 
         className={`absolute inset-0 w-full h-full object-cover mix-blend-lighten transition-opacity duration-[1500ms] ease-in-out ${currentLayer === 0 ? 'opacity-100' : 'opacity-0'}`} 
         alt="Body"
       />
       <img 
-        src="/assets/layer2_skeleton.png" 
+        src={`${import.meta.env.BASE_URL}assets/layer2_skeleton.png`} 
         className={`absolute inset-0 w-full h-full object-cover mix-blend-lighten transition-opacity duration-[1500ms] ease-in-out ${currentLayer === 1 ? 'opacity-100' : 'opacity-0'}`} 
         alt="Skeleton"
       />
       <img 
-        src="/assets/layer3_nerves.png" 
+        src={`${import.meta.env.BASE_URL}assets/layer3_nerves.png`} 
         className={`absolute inset-0 w-full h-full object-cover mix-blend-lighten transition-opacity duration-[1500ms] ease-in-out ${currentLayer === 2 ? 'opacity-100' : 'opacity-0'}`} 
         alt="Nerves"
       />
@@ -52,13 +52,13 @@ export const Hero = ({ onOpenQuiz }: HeroProps) => {
           
           <FadeIn delay={0.2}>
             <h1 className="text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-8">
-              Найдите и проработайте <span className="italic relative inline-block">истинную<div className="absolute -bottom-1 left-0 w-full h-3 bg-accent-yellow/40 -z-10 rounded-sm"></div></span> первопричину вашей боли, усталости или апатии.
+              Найдите и проработайте <span className="italic relative inline-block">истинную<div className="absolute -bottom-1 left-0 w-full h-3 bg-accent-yellow/40 -z-10 rounded-sm"></div></span> первопричину вашей боли, усталости или эмоционального конфликта.
             </h1>
           </FadeIn>
           
           <FadeIn delay={0.3}>
             <p className="text-xl text-graphite/80 leading-relaxed mb-10 max-w-xl font-light">
-              Мягкая диагностика и восстановление организма через связь тела, нервной системы и психики. Возвращаем вас к жизни на полной мощности без жестких мануальных правок.
+              Мягкая диагностика и восстановление организма через связь тела, нервной системы и психики. Возвращаем вас к жизни на полной мощности без жестких мануальных правок и бесконечных психологических проработок.
             </p>
           </FadeIn>
           
