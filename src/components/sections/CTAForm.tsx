@@ -25,7 +25,7 @@ export const CTAForm = () => {
             Здоровье начнет заниматься вами, <span className="italic relative inline-block">если вы не займетесь им.<div className="absolute bottom-2 left-0 w-full h-2 bg-accent-yellow/40 -z-10 rounded-sm"></div></span>
           </h2>
           <p className="text-xl text-white/80 font-light mb-8 max-w-lg leading-relaxed">
-            Хватит оправдывать бездействие болью. Оставьте заявку, я свяжусь с вами, чтобы обсудить вашу ситуацию и подобрать формат первой сессии.
+            Не оправдывайте бездействие болью. Оставьте заявку, я свяжусь с вами, чтобы обсудить вашу ситуацию и подобрать формат первой сессии.
           </p>
         </FadeIn>
 
