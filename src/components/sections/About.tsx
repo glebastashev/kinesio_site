@@ -25,11 +25,14 @@ export const About = () => {
             <h2 className="text-4xl md:text-5xl leading-tight mb-8 font-serif">
               Я верю в здоровье и потенциал каждого клиента.
             </h2>
-            <p className="text-xl text-white/80 font-light mb-8 italic border-l-2 border-accent-yellow pl-6">
+            <p className="text-xl text-white/80 font-light mb-4 italic border-l-2 border-accent-yellow pl-6">
               «Я был у многих специалистов, сдал все анализы, но настоящие подвижки увидел только с вами»
             </p>
+            <p className="text-xl text-white/80 font-light mb-8 italic border-l-2 border-accent-yellow/50 pl-6">
+              «Стало всё как-то по-другому: у меня новые идеи, ушли негативные мысли, много двигаюсь, по-другому реагирую»
+            </p>
             <p className="text-lg text-white/70 font-light leading-relaxed mb-10">
-              Меня зовут <strong className="text-white font-medium">Надежда Ефремова</strong>. Моя главная сила — не использовать заученные шаблоны, а размышлять и докапываться до истинной первопричину.
+              Меня зовут <strong className="text-white font-medium">Надежда Ефремова</strong>. Моя главная сила — не использовать заученные шаблоны, а размышлять и докапываться до первопричины.
             </p>
           </FadeIn>
 
@@ -43,7 +46,7 @@ export const About = () => {
             <FadeIn delay={0.3} className="glass-dark p-6 bg-white/5 border-white/10 relative overflow-hidden">
                <div className="absolute top-0 left-0 w-1 h-full bg-accent-yellow/60" />
                <h4 className="text-xl font-bold mb-2">Образование</h4>
-               <p className="text-white/70 font-light">Являюсь специалистом по оздоровлению, нейродинамическому восстановлению и нейроинтегративной психокинезиологии (НИПК). Также прохожу обучение по остеопатии.</p>
+               <p className="text-white/70 font-light">Являюсь специалистом по оздоровлению, нейродинамическому восстановлению и нейроинтегративной психокинезиологии (НИПК).</p>
             </FadeIn>
           </div>
         </div>
