@@ -45,12 +45,17 @@ export const Hero = ({ onOpenQuiz, onOpenContact }: HeroProps) => {
     <section className="relative min-h-[90vh] flex items-center pt-32 pb-20 overflow-hidden">
       {/* Background glowing orb */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-yellow/10 rounded-full blur-[120px] pointer-events-none" />
+
+      {/* Mobile: anatomy loop as a ghost background */}
+      <div className="absolute inset-0 flex items-center justify-end pr-4 pointer-events-none lg:hidden">
+        <div className="opacity-[0.07] scale-110 origin-right">
+          <AnatomyLoop />
+        </div>
+      </div>
       
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full grid lg:grid-cols-2 gap-12 items-center">
         
         <div className="max-w-2xl">
-
-          
           <FadeIn delay={0.2}>
             <h1 className="text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-8">
               Найдите и проработайте <span className="italic relative inline-block">истинную<div className="absolute -bottom-1 left-0 w-full h-3 bg-accent-yellow/40 -z-10 rounded-sm"></div></span> первопричину вашей боли, усталости или эмоционального конфликта.
@@ -73,8 +78,8 @@ export const Hero = ({ onOpenQuiz, onOpenContact }: HeroProps) => {
           </FadeIn>
         </div>
 
-        {/* Looping anatomy animation */}
-        <FadeIn delay={0.6} className="relative flex justify-center lg:justify-end mt-8 lg:mt-0">
+        {/* Desktop: anatomy loop as a full column */}
+        <FadeIn delay={0.6} className="relative hidden lg:flex justify-end">
           <AnatomyLoop />
         </FadeIn>
 
