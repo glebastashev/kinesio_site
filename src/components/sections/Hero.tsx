@@ -4,6 +4,7 @@ import { FadeIn } from '../ui/Animations';
 
 interface HeroProps {
   onOpenQuiz: () => void;
+  onOpenContact: () => void;
 }
 
 const AnatomyLoop = () => {
@@ -39,7 +40,7 @@ const AnatomyLoop = () => {
   );
 };
 
-export const Hero = ({ onOpenQuiz }: HeroProps) => {
+export const Hero = ({ onOpenQuiz, onOpenContact }: HeroProps) => {
   return (
     <section className="relative min-h-[90vh] flex items-center pt-32 pb-20 overflow-hidden">
       {/* Background glowing orb */}
@@ -63,7 +64,7 @@ export const Hero = ({ onOpenQuiz }: HeroProps) => {
           </FadeIn>
           
           <FadeIn delay={0.4} className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="w-full sm:w-auto text-lg">
+            <Button size="lg" className="w-full sm:w-auto text-lg" onClick={onOpenContact}>
               Оставить заявку на разбор
             </Button>
             <Button variant="glass" size="lg" className="w-full sm:w-auto text-lg" onClick={onOpenQuiz}>

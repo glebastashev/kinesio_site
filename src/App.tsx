@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Navbar } from './components/layout/Navbar';
 import { Hero } from './components/sections/Hero';
@@ -15,16 +15,20 @@ import { Cases } from './components/sections/Cases';
 import { FAQ } from './components/sections/FAQ';
 import { CTAForm } from './components/sections/CTAForm';
 import { QuizFlow } from './components/quiz/QuizFlow';
+import { ContactModal } from './components/ui/ContactModal';
 
 function App() {
   const [isQuizOpen, setIsQuizOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
+  const openContact = () => setIsContactOpen(true);
 
   return (
     <div className="relative font-sans antialiased text-graphite min-h-screen">
       
       <div className="relative z-10">
-        <Navbar onOpenQuiz={() => setIsQuizOpen(true)} />
-        <Hero onOpenQuiz={() => setIsQuizOpen(true)} />
+        <Navbar onOpenQuiz={() => setIsQuizOpen(true)} onOpenContact={openContact} />
+        <Hero onOpenQuiz={() => setIsQuizOpen(true)} onOpenContact={openContact} />
         <ProblemScenarios />
         <QuizCallout onOpenQuiz={() => setIsQuizOpen(true)} />
         <Audience />
@@ -32,7 +36,7 @@ function App() {
         <Comparison />
         <Methodology />
         <ServiceDetails />
-        <Services />
+        <Services onOpenContact={openContact} />
         <About />
         <Cases />
         <FAQ />
@@ -41,6 +45,10 @@ function App() {
 
       <AnimatePresence>
         {isQuizOpen && <QuizFlow isOpen={isQuizOpen} onClose={() => setIsQuizOpen(false)} />}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {isContactOpen && <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />}
       </AnimatePresence>
     </div>
   );

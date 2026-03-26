@@ -32,7 +32,7 @@ const services = [
 ];
 
 
-export const Services = () => {
+export const Services = ({ onOpenContact }: { onOpenContact: () => void }) => {
   return (
     <section className="py-24 relative overflow-hidden bg-alabaster">
       {/* Background glow */}
@@ -61,7 +61,7 @@ export const Services = () => {
                   {service.description}
                 </p>
                 
-                <Button variant="outline" className="w-full mt-auto group-hover:bg-graphite group-hover:text-white group-hover:border-graphite transition-all duration-300 z-10">
+                <Button variant="outline" className="w-full mt-auto group-hover:bg-graphite group-hover:text-white group-hover:border-graphite transition-all duration-300 z-10" onClick={onOpenContact}>
                   Оставить заявку
                 </Button>
               </Card>
