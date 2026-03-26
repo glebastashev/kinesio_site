@@ -1,7 +1,8 @@
 import React from 'react';
 import { FadeIn } from '../ui/Animations';
+import { Button } from '../ui/Button';
 
-export const Philosophy = () => {
+export const Philosophy = ({ onOpenContact }: { onOpenContact: () => void }) => {
   return (
     <section className="py-24 relative overflow-hidden bg-graphite text-white">
       {/* Subtle organic texture or glow */}
@@ -38,6 +39,11 @@ export const Philosophy = () => {
             <p className="font-medium text-white text-2xl mt-8">
               В рамках метода НИПК мы ищем первопричину, убираем привычки, то есть рефлекторные процессы, в которых живет человек, через комплексную работу для его здоровья, физической активности и благополучия.
             </p>
+            <div className="mt-10">
+              <Button size="lg" className="bg-accent-yellow text-graphite hover:bg-accent-yellow/90" onClick={onOpenContact}>
+                Записаться на сеанс
+              </Button>
+            </div>
           </FadeIn>
         </div>
       </div>

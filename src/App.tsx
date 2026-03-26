@@ -29,16 +29,16 @@ function App() {
       <div className="relative z-10">
         <Navbar onOpenQuiz={() => setIsQuizOpen(true)} onOpenContact={openContact} />
         <Hero onOpenQuiz={() => setIsQuizOpen(true)} onOpenContact={openContact} />
-        <ProblemScenarios />
+        <ProblemScenarios onOpenContact={openContact} />
         <QuizCallout onOpenQuiz={() => setIsQuizOpen(true)} />
         <Audience />
-        <Philosophy />
+        <Philosophy onOpenContact={openContact} />
         <Comparison />
-        <Methodology />
+        <Methodology onOpenContact={openContact} />
         <ServiceDetails />
         <Services onOpenContact={openContact} />
         <About />
-        <Cases />
+        <Cases onOpenContact={openContact} />
         <FAQ />
         <CTAForm />
       </div>

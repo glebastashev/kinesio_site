@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from '../ui/Card';
 import { FadeIn } from '../ui/Animations';
 import { Quote } from 'lucide-react';
+import { Button } from '../ui/Button';
 
 const cases = [
   {
@@ -21,7 +22,7 @@ const cases = [
   }
 ];
 
-export const Cases = () => {
+export const Cases = ({ onOpenContact }: { onOpenContact: () => void }) => {
   return (
     <section className="py-24 relative overflow-hidden bg-white/40">
       <div className="max-w-7xl mx-auto px-6">
@@ -49,6 +50,11 @@ export const Cases = () => {
             </FadeIn>
           ))}
         </div>
+          <FadeIn delay={0.4} className="mt-12 text-center">
+            <Button size="lg" onClick={onOpenContact}>
+              Записаться на сеанс
+            </Button>
+          </FadeIn>
       </div>
     </section>
   );

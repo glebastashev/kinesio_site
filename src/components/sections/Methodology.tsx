@@ -1,5 +1,6 @@
 import React from 'react';
 import { FadeIn } from '../ui/Animations';
+import { Button } from '../ui/Button';
 
 const steps = [
   {
@@ -16,7 +17,7 @@ const steps = [
   }
 ];
 
-  export const Methodology = () => {
+  export const Methodology = ({ onOpenContact }: { onOpenContact: () => void }) => {
   return (
     <section className="py-24 relative overflow-hidden bg-white/60">
       <div className="max-w-5xl mx-auto px-6">
@@ -72,6 +73,12 @@ const steps = [
           </div>
         </div>
         </div>
+
+        <FadeIn delay={0.4} className="mt-14 text-center">
+          <Button size="lg" onClick={onOpenContact}>
+            Записаться на первый сеанс
+          </Button>
+        </FadeIn>
       </div>
     </section>
   );

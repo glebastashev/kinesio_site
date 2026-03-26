@@ -73,8 +73,8 @@ export const Hero = ({ onOpenQuiz, onOpenContact }: HeroProps) => {
           </FadeIn>
         </div>
 
-        {/* Right side - Looping GIF / Anatomy */}
-        <FadeIn delay={0.6} className="relative hidden lg:block">
+        {/* Looping anatomy animation */}
+        <FadeIn delay={0.6} className="relative flex justify-center lg:justify-end mt-8 lg:mt-0">
           <AnatomyLoop />
         </FadeIn>
 

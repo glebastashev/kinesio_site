@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from '../ui/Card';
 import { FadeIn } from '../ui/Animations';
+import { Button } from '../ui/Button';
 import { Activity, Brain, Compass, Link2, Target } from 'lucide-react';
 
 const scenarios = [
@@ -31,7 +32,7 @@ const scenarios = [
   }
 ];
 
-export const ProblemScenarios = () => {
+export const ProblemScenarios = ({ onOpenContact }: { onOpenContact: () => void }) => {
   return (
     <section className="py-24 relative overflow-hidden bg-white/30">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -62,6 +63,12 @@ export const ProblemScenarios = () => {
             </FadeIn>
           ))}
           </div>
+
+          <FadeIn delay={0.5} className="mt-12 text-center">
+            <Button size="lg" onClick={onOpenContact}>
+              Записаться на диагностику
+            </Button>
+          </FadeIn>
         </div>
       </div>
     </section>
