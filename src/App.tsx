@@ -9,6 +9,7 @@ import { Philosophy } from './components/sections/Philosophy';
 import { Comparison } from './components/sections/Comparison';
 import { Methodology } from './components/sections/Methodology';
 import { Services } from './components/sections/Services';
+import { ServiceDetails } from './components/sections/ServiceDetails';
 import { About } from './components/sections/About';
 import { Cases } from './components/sections/Cases';
 import { FAQ } from './components/sections/FAQ';
@@ -30,6 +31,7 @@ function App() {
         <Philosophy />
         <Comparison />
         <Methodology />
+        <ServiceDetails />
         <Services />
         <About />
         <Cases />
