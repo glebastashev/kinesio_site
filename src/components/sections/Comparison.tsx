@@ -10,7 +10,7 @@ export const Comparison = () => {
         <div>
           <FadeIn>
             <h2 className="text-4xl md:text-5xl leading-tight">
-              Лечить там, где болит — не значит вылечить.
+              Снять боль — не значит решить проблему.
             </h2>
           </FadeIn>
         </div>
