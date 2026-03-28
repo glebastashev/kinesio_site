@@ -29,6 +29,12 @@ export const Methodology = ({ onOpenContact }: { onOpenContact: () => void }) =>
                 alt="Надежда Ефремова — работа с клиентом"
                 className="w-full h-[500px] object-cover object-center"
               />
+              {/* Profession label */}
+              <div className="absolute bottom-0 left-0 right-0 px-6 py-5 bg-gradient-to-t from-graphite/75 via-graphite/30 to-transparent">
+                <p className="text-white/90 text-sm font-light tracking-[0.15em] uppercase">
+                  Нейроинтегративный психокинезиолог
+                </p>
+              </div>
               {/* Subtle overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-graphite/30 via-transparent to-transparent" />
             </div>
