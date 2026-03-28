@@ -16,6 +16,12 @@ export const About = () => {
               alt="Надежда Ефремова" 
               className="w-full h-full object-cover object-top rounded-xl shadow-2xl scale-[1.2] origin-top"
             />
+              {/* Text overlay */}
+              <div className="absolute bottom-0 left-0 right-0 px-5 py-4 bg-gradient-to-t from-graphite/80 via-graphite/40 to-transparent rounded-b-xl">
+                <p className="text-white/90 text-sm font-light tracking-[0.15em] uppercase">
+                  Нейроинтегративный психокинезиолог
+                </p>
+              </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent-yellow rounded-full mix-blend-overlay blur-xl" />
            </div>
         </FadeIn>
