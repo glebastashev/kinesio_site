@@ -14,7 +14,7 @@ export const About = () => {
               <img 
               src={`${import.meta.env.BASE_URL}assets/nadezhda_photo.jpeg`} 
               alt="Надежда Ефремова" 
-              className="w-full h-full object-cover rounded-xl shadow-2xl"
+              className="w-full h-full object-cover object-top rounded-xl shadow-2xl scale-[1.2] origin-top"
             />
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent-yellow rounded-full mix-blend-overlay blur-xl" />
            </div>

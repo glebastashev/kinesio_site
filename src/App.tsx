@@ -33,11 +33,11 @@ function App() {
         <QuizCallout onOpenQuiz={() => setIsQuizOpen(true)} />
         <Audience />
         <Philosophy onOpenContact={openContact} />
+        <About />
         <Comparison />
         <Methodology onOpenContact={openContact} />
         <ServiceDetails />
         <Services onOpenContact={openContact} />
-        <About />
         <Cases onOpenContact={openContact} />
         <FAQ />
         <CTAForm />
