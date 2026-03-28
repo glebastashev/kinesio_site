@@ -91,7 +91,7 @@ export const ServiceDetails = () => {
 
                   <div className={cn(
                     "overflow-hidden transition-all duration-300 ease-in-out px-6",
-                    isOpen ? "max-h-[600px] pb-6 opacity-100" : "max-h-0 opacity-0"
+                    isOpen ? "max-h-[1000px] pb-6 opacity-100" : "max-h-0 opacity-0"
                   )}>
                     <p className="text-graphite/70 font-light leading-relaxed border-t border-graphite/10 pt-4 whitespace-pre-line">
                       {item.body}
