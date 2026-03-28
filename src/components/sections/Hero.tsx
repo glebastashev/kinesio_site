@@ -7,6 +7,7 @@ interface HeroProps {
   onOpenContact: () => void;
 }
 
+// Mobile: subtle ambient background
 const AnatomyBackground = () => {
   const [currentLayer, setCurrentLayer] = useState(0);
 
@@ -24,7 +25,7 @@ const AnatomyBackground = () => {
   ];
 
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+    <div className="absolute inset-0 pointer-events-none overflow-hidden lg:hidden">
       {layers.map((src, i) => (
         <img
           key={i}
@@ -35,9 +36,41 @@ const AnatomyBackground = () => {
           }`}
         />
       ))}
-      {/* Left-side gradient keeps text perfectly legible */}
-      <div className="absolute inset-0 bg-gradient-to-r from-alabaster via-alabaster/70 to-transparent md:via-alabaster/50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-alabaster via-alabaster/70 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-b from-alabaster/50 via-transparent to-alabaster/50" />
+    </div>
+  );
+};
+
+// Desktop: original phone-shaped widget
+const AnatomyLoop = () => {
+  const [currentLayer, setCurrentLayer] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentLayer(prev => (prev + 1) % 3);
+    }, 1500);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="relative w-[360px] h-[640px] bg-graphite/95 rounded-[60px] shadow-[0_30px_60px_rgba(0,0,0,0.5)] border border-white/10 overflow-hidden flex items-center justify-center isolate scale-90 lg:scale-100 origin-center mx-auto">
+      <div className="absolute inset-0 rounded-[60px] shadow-[inset_0_0_80px_rgba(0,0,0,0.8)] pointer-events-none" />
+      <img
+        src={`${import.meta.env.BASE_URL}assets/layer1_body.png`}
+        className={`absolute inset-0 w-full h-full object-cover mix-blend-lighten transition-opacity duration-[1500ms] ease-in-out ${currentLayer === 0 ? 'opacity-100' : 'opacity-0'}`}
+        alt="Body"
+      />
+      <img
+        src={`${import.meta.env.BASE_URL}assets/layer2_skeleton.png`}
+        className={`absolute inset-0 w-full h-full object-cover mix-blend-lighten transition-opacity duration-[1500ms] ease-in-out ${currentLayer === 1 ? 'opacity-100' : 'opacity-0'}`}
+        alt="Skeleton"
+      />
+      <img
+        src={`${import.meta.env.BASE_URL}assets/layer3_nerves.png`}
+        className={`absolute inset-0 w-full h-full object-cover mix-blend-lighten transition-opacity duration-[1500ms] ease-in-out ${currentLayer === 2 ? 'opacity-100' : 'opacity-0'}`}
+        alt="Nerves"
+      />
     </div>
   );
 };
@@ -45,13 +78,13 @@ const AnatomyBackground = () => {
 export const Hero = ({ onOpenQuiz, onOpenContact }: HeroProps) => {
   return (
     <section className="relative min-h-[90vh] flex items-center pt-32 pb-20 overflow-hidden">
-      {/* Anatomy cycling as ambient background */}
+      {/* Mobile ambient background */}
       <AnatomyBackground />
 
-      {/* Subtle yellow glow */}
-      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent-yellow/10 rounded-full blur-[140px] pointer-events-none" />
+      {/* Yellow glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-yellow/10 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full grid lg:grid-cols-2 gap-12 items-center">
         <div className="max-w-2xl">
           <FadeIn delay={0.2}>
             <h1 className="text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-8">
@@ -74,6 +107,11 @@ export const Hero = ({ onOpenQuiz, onOpenContact }: HeroProps) => {
             </Button>
           </FadeIn>
         </div>
+
+        {/* Desktop only: phone widget */}
+        <FadeIn delay={0.6} className="relative hidden lg:flex justify-end">
+          <AnatomyLoop />
+        </FadeIn>
       </div>
     </section>
   );
