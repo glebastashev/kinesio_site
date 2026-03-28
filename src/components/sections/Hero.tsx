@@ -32,7 +32,7 @@ const AnatomyBackground = () => {
           src={src}
           alt=""
           className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2000ms] ease-in-out ${
-            currentLayer === i ? 'opacity-[0.20]' : 'opacity-0'
+            currentLayer === i ? 'opacity-[0.30]' : 'opacity-0'
           }`}
         />
       ))}
