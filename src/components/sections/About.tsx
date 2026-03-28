@@ -14,7 +14,7 @@ export const About = () => {
               <img 
               src={`${import.meta.env.BASE_URL}assets/nadezhda_photo.jpeg`} 
               alt="Надежда Ефремова" 
-              className="w-full h-full object-cover object-top rounded-xl shadow-2xl scale-[1.2] origin-top"
+              className="w-full h-full object-cover rounded-xl shadow-2xl scale-[1.45] origin-center" style={{ objectPosition: '50% 35%' }}
             />
               {/* Text overlay */}
               <div className="absolute bottom-0 left-0 right-0 px-5 py-4 bg-gradient-to-t from-graphite/80 via-graphite/40 to-transparent rounded-b-xl">
