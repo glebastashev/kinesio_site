@@ -21,10 +21,10 @@ export const QuizCallout = ({ onOpenQuiz }: QuizCalloutProps) => {
               <div className="relative">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-[3px] border-accent-yellow shadow-lg">
                   <img
-                    src={`${import.meta.env.BASE_URL}assets/quiz_avatar.jpeg`}
+                    src={`${import.meta.env.BASE_URL}assets/quiz_avatar.png`}
                     alt="Надежда Ефремова"
                     className="w-full h-full object-cover"
-                    style={{ objectPosition: '50% 15%' }}
+                    style={{ objectPosition: 'center' }}
                   />
                 </div>
                 {/* Pulse ring */}
