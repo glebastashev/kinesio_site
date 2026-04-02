@@ -16,10 +16,10 @@ export const QuizCallout = ({ onOpenQuiz }: QuizCalloutProps) => {
         <FadeIn>
           <div className="glass-panel p-8 md:p-16 relative overflow-hidden">
 
-            {/* Mobile: circular avatar with accent ring */}
-            <div className="flex justify-center mb-6 md:hidden">
+            {/* Circular avatar with accent ring */}
+            <div className="flex justify-center mb-6 md:mb-8 relative z-10">
               <div className="relative">
-                <div className="w-20 h-20 rounded-full overflow-hidden border-[3px] border-accent-yellow shadow-lg">
+                <div className="w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-[3px] border-accent-yellow shadow-lg bg-white relative z-10">
                   <img
                     src={`${import.meta.env.BASE_URL}assets/quiz_avatar.png`}
                     alt="Надежда Ефремова"
