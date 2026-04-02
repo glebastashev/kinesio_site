@@ -24,7 +24,7 @@ export const QuizCallout = ({ onOpenQuiz }: QuizCalloutProps) => {
                     src={`${import.meta.env.BASE_URL}assets/quiz_avatar.jpeg`}
                     alt="Надежда Ефремова"
                     className="w-full h-full object-cover"
-                    style={{ objectPosition: '50% 20%' }}
+                    style={{ objectPosition: '50% 15%' }}
                   />
                 </div>
                 {/* Pulse ring */}
