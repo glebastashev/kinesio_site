@@ -5,8 +5,11 @@ export const Navbar = ({ onOpenQuiz, onOpenContact }: { onOpenQuiz: () => void; 
   return (
     <nav className="fixed top-0 inset-x-0 z-50 px-4 py-4 md:px-8 md:py-6">
       <div className="max-w-7xl mx-auto flex items-center justify-between glass-panel px-6 py-4 rounded-full">
-        <div className="flex items-center">
-          {/* Logo mark: name in 2 lines */}
+        <div className="flex items-center gap-3">
+          {/* Subtle elegant logo mark */}
+          <div className="w-8 h-8 rounded-full bg-accent-yellow flex items-center justify-center text-graphite font-serif font-bold text-xl shrink-0">
+            N
+          </div>
           <div className="font-serif text-sm md:text-base font-medium tracking-wide leading-tight text-graphite">
             Надежда<br />Ефремова
           </div>
